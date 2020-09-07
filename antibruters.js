@@ -3,7 +3,7 @@ info
 -----
 this is a node application.
 The code is all written by 
-@circuit10/Health123
+@circuit10/Heath123
 their github can be found here: (https://github.com/Heath123)
 this code will only work against chinese ip adresses or victims as it is sending terms that are blocked by chinese government censorship.
 You could ofc add your own terms if you wanted to
