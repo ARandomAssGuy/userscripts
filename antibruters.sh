@@ -21,13 +21,13 @@ then
     fi
     echo "No installer yet for macos, you can manually install nodejs."
     fi
-    fi
     if [ "$OSTYPE" = "linux-gnu" ]
     then
     sudo apt-get install nodejs
     sudo apt-get install npm
     else
     echo "No installer is out for your OS yet. You can manually install nodejs."
+    fi
     fi
     else 
     if ! command -v npm &> /dev/null
