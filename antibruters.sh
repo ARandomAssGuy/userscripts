@@ -36,6 +36,7 @@ then
     fi
     fi
     fi
+    fi
     else 
     if ! command -v npm &> /dev/null
 then
