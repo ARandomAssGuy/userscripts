@@ -23,12 +23,12 @@ then
     fi
     if [ "$OSTYPE" = "linux-gnu" ]
     then
-    if ! command -v apt-get &> /dev/null
+    if command -v apt-get &> /dev/null
     then
     sudo apt-get install nodejs
     sudo apt-get install npm
     else
-    if ! command -v pacman &> /dev/null
+    if command -v pacman &> /dev/null
     then
     sudo pacman -S nodejs npm
     else
