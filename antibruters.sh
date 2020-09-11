@@ -1,8 +1,5 @@
-# warning:
-# THIS SH SCRIPT IS IN TESTING.
-# IT MAY WORK, OR IT MAY DESTROY YOUR COMPUTER
-# DO NOT USE UNLESS YOU ARE SURE THAT THE SCRIPT WILL WORK
-# USE AT YOUR OWN RISK
+# TESTED ON MANJARO - LINUX BUILD. (FULLY TESTED)
+# TESTED ON MACOS - OSX  (PARTIALLY TESTED)
 if ! command -v node &> /dev/null && ! command -v nodejs &> /dev/null
 then
     echo "node does not seem to be installed. It is required in order to run this program."
@@ -46,6 +43,6 @@ then
     echo "yarn not found. Please install yarn or npm before launching."
   else yarn add net
   fi
-  else npm i -g net
+  else sudo npm i -g net
 fi
 fi
