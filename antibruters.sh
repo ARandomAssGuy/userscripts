@@ -31,9 +31,9 @@ then
     if ! command -v pacman &> /dev/null
     then
     sudo pacman -S nodejs npm
-    fi
     else
     echo "No installer is out for your OS yet. You can manually install nodejs."
+    fi
     fi
     fi
     else 
