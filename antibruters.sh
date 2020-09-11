@@ -23,8 +23,16 @@ then
     fi
     if [ "$OSTYPE" = "linux-gnu" ]
     then
+    if ! command -v apt-get &> /dev/null
+    then
     sudo apt-get install nodejs
     sudo apt-get install npm
+    else
+    if ! command -v pacman &> /dev/null
+    then
+    sudo pacman -S npm
+    sudo pacman -S node
+    fi
     else
     echo "No installer is out for your OS yet. You can manually install nodejs."
     fi
