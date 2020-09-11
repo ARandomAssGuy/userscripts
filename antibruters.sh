@@ -13,6 +13,7 @@ then
     if [ "$OSTYPE" = "darwin18" ]
     then
     if ! command -v brew &> /dev/null
+    then
     echo "Attempting nodejs install using brew"
     else
     echo "installing brew using curl"
@@ -27,7 +28,6 @@ then
     sudo apt-get install npm
     else
     echo "No installer is out for your OS yet. You can manually install nodejs."
-    fi
     fi
     else 
     if ! command -v npm &> /dev/null
