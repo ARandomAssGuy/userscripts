@@ -34,6 +34,7 @@ outputarr.push(txt)
 })
 return outputarr.join('')
 }
+alert('Thanks for using this script, made by arandomassguy. My website can be found over at a68agaming.net')
 window.$x('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div/main/form/div/div/div/div/div[3]/div[2]')[0].onkeyup=function(evt) {
 if (evt.key.split('').length>1) return;
 var text = evt.key
