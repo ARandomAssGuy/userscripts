@@ -4,6 +4,7 @@ Java would be a better language to code this in, but idk how 2 java (yet).
 i do not take any responsibility for how this script is used.
 */
 
+
 const fs = require('fs');
 const crypto = require('crypto');
 const readline = require('readline');
@@ -30,7 +31,9 @@ function overWriteFile(file, filesize) {
 function getFileSizes(files, dir) {
   let filesizes={};
   files.forEach((file)=>{
-    filesizes[file]=fs.statSync(dir+'/'+file).size;
+    let fileinfo = fs.statSync(dir+'/'+file);
+    if (fileinfo.isDirectory()) {return;};
+    filesizes[file]=fileinfo.size;
   });
   return filesizes;
 };
@@ -62,6 +65,9 @@ if (fileinfo.isDirectory()) {
         if (i>amount) {clearInterval(overWriter); console.log('Completed overwrite.'); process.exit(0);};
         overWriteDir(sizes, files, file);
       }, 1);
+    } else {
+      console.log('You have not typed the filename/confirmed the action. quitting the app.');
+      process.exit(0);
     };
   });
 } else {
