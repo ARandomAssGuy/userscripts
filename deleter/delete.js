@@ -32,7 +32,6 @@ function getFileSizes(files, dir) {
   let filesizes={};
   files.forEach((file)=>{
     let fileinfo = fs.statSync(dir+'/'+file);
-    if (fileinfo.isDirectory()) {return;};
     filesizes[file]=fileinfo.size;
   });
   return filesizes;
@@ -41,6 +40,7 @@ function getFileSizes(files, dir) {
 function overWriteDir(sizes, files, filename) {
   i++;
   files.forEach((file)=>{
+    if (fs.statSync(filename+'/'+file).isDirectory()) {return;};
     let rbytes = crypto.randomBytes(sizes[file]);
     fs.writeFileSync(filename+'/'+file, rbytes);
     console.log('Overwrite number '+i+' for file '+file+' completed.');
