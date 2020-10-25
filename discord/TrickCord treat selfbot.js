@@ -20,6 +20,10 @@ function getRandomTypeLength(min=options.min, max=options.max) {
   return Math.random() * (max - min) + min;
 }
 
+async function asyncsleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 function inGuild(id) {
   return (options.inguild ? id==options.inguild : true)
 }
