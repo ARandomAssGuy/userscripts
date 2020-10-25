@@ -29,7 +29,7 @@ function inChannel(id) {
 }
 
 client.on('message', async (msg)=>{
-    if (msg.author.id==options.botid&&inGuild(msg.guild.id)&&inChannel(msg.channel.id)&&msg.embeds.length==1&&msg.embeds[0].description&&msg.embeds[0].description.match(options.matchreg)) 
+    if (msg.author.id==options.botid&&inGuild(msg.guild.id)&&inChannel(msg.channel.id)&&msg.embeds.length==1&&msg.embeds[0].description&&msg.embeds[0].description.match(options.matchreg)) {
         let tosend=msg.embeds[0].description.match(options.matchreg)[0]
         await msg.channel.startTyping();
         await asyncsleep(getRandomTypeLength());
