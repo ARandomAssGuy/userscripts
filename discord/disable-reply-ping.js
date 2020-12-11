@@ -1,6 +1,7 @@
 /*
 Disable / Enable reply ping in discord. 
-Simple code
+Simple code, paste it in console, press enter, and you're done
+(Windows or Linux: ctrl + shift + i to open console, Mac: command + shift + i to open console)
 
 Coded by A68AGaming.
 
