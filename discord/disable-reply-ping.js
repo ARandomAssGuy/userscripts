@@ -3,6 +3,8 @@ Disable / Enable reply ping in discord.
 Simple code
 
 Coded by A68AGaming.
+
+Make sure to read the license. https://github.com/A68AGaming/scripts/blob/master/LICENSE
 */
 buttonadded = false;
 disableReplyPing = true;
